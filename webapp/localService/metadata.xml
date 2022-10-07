@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="SflightService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Customers" EntityType="SflightService.Customers"/>
+                <EntitySet Name="CustomersWalldorfView" EntityType="SflightService.CustomersWalldorfView"/>
+            </EntityContainer>
+            <EntityType Name="Customers">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="8" Nullable="false" DefaultValue="00000000"/>
+                <Property Name="NAME" Type="Edm.String" MaxLength="25"/>
+                <Property Name="FORM" Type="Edm.String" MaxLength="15"/>
+                <Property Name="STREET" Type="Edm.String" MaxLength="30"/>
+                <Property Name="POSTBOX" Type="Edm.String" MaxLength="10"/>
+                <Property Name="POSTCODE" Type="Edm.String" MaxLength="10"/>
+                <Property Name="CITY" Type="Edm.String" MaxLength="25"/>
+                <Property Name="COUNTRY" Type="Edm.String" MaxLength="3"/>
+                <Property Name="REGION" Type="Edm.String" MaxLength="3"/>
+                <Property Name="TELEPHONE" Type="Edm.String" MaxLength="30"/>
+                <Property Name="CUSTTYPE" Type="Edm.String" MaxLength="1"/>
+                <Property Name="DISCOUNT" Type="Edm.String" MaxLength="3" DefaultValue="000"/>
+                <Property Name="LANGU" Type="Edm.String" MaxLength="1"/>
+                <Property Name="EMAIL" Type="Edm.String" MaxLength="40"/>
+            </EntityType>
+            <EntityType Name="CustomersWalldorfView">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="8" Nullable="false" DefaultValue="00000000"/>
+                <Property Name="NAME" Type="Edm.String" MaxLength="25"/>
+                <Property Name="FORM" Type="Edm.String" MaxLength="15"/>
+                <Property Name="STREET" Type="Edm.String" MaxLength="30"/>
+                <Property Name="POSTBOX" Type="Edm.String" MaxLength="10"/>
+                <Property Name="POSTCODE" Type="Edm.String" MaxLength="10"/>
+                <Property Name="CITY" Type="Edm.String" MaxLength="25"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
