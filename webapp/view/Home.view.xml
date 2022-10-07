@@ -1,7 +1,42 @@
-<mvc:View controllerName="btp.academy.customers.controller.Home"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+<mvc:View controllerName="btp.academy.customers.controller.Home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:semantic="sap.f.semantic">
+    <semantic:SemanticPage id="mySemanticPage" headerPinnable="true" toggleHeaderOnTitleClick="true" preserveHeaderStateOnScroll="false" titleAreaShrinkRatio="1:1.6:1.6" showFooter="false">
+        <semantic:titleHeading>
+            <Title text="{i18n>title}" />
+        </semantic:titleHeading>
+        <semantic:content>
+            
+            	<Table id="idProductsTable"
+		inset="false"
+		items="{
+			path: '/value'
+		}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Customers" level="H2"/>
+					<ToolbarSpacer />
+                    <Button text="Press me" press="onPress" />
+
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="ID" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier
+						title="{ID}"
+						text="{NAME}"/>
+				
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+        </semantic:content>
+    </semantic:SemanticPage>
 </mvc:View>
