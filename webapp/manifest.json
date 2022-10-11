@@ -119,6 +119,13 @@
                     "target": [
                         "TargetHome"
                     ]
+                },
+                {
+                    "name": "Detail",
+                    "pattern": "Customer/{ID}",
+                    "target": [
+                        "Detail"
+                    ]
                 }
             ],
             "targets": {
@@ -128,6 +135,13 @@
                     "clearControlAggregation": false,
                     "viewId": "Home",
                     "viewName": "Home"
+                },
+                "Detail": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Detail",
+                    "viewName": "Detail"
                 }
             }
         },

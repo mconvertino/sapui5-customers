@@ -4,39 +4,54 @@
             <Title text="{i18n>title}" />
         </semantic:titleHeading>
         <semantic:content>
-            
-            	<Table id="idProductsTable"
-		inset="false"
-		items="{
-			path: '/value'
-		}">
-		<headerToolbar>
-			<OverflowToolbar>
-				<content>
-					<Title text="Customers" level="H2"/>
-					<ToolbarSpacer />
-                    <Button text="Press me" press="onPress" />
-
-				</content>
-			</OverflowToolbar>
-		</headerToolbar>
-		<columns>
-			<Column
-				width="12em">
-				<Text text="ID" />
-			</Column>
-		</columns>
-		<items>
-			<ColumnListItem vAlign="Middle">
-				<cells>
-					<ObjectIdentifier
-						title="{ID}"
-						text="{NAME}"/>
-				
-				</cells>
-			</ColumnListItem>
-		</items>
-	</Table>
+            <Table id="idCustomersTable" inset="false" items="{path:'/value'}" sticky="ColumnHeaders,HeaderToolbar"
+				  width="auto">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Title text="{i18n>tableName}" level="H2" />
+                            <ToolbarSpacer />
+                            <Button text="{i18n>reload}" press="onReloadPress" icon="sap-icon://refresh" />
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Customer" />
+                    </Column>
+                    <Column>
+                        <Text text="FORM" />
+                    </Column>
+                    <Column>
+                        <Text text="CITY" />
+                    </Column>
+                    <Column>
+                        <Text text="COUNTRY" />
+                    </Column>
+                    <Column>
+                        <Text text="REGION" />
+                    </Column>
+                    <Column>
+                        <Text text="TELEPHONE" />
+                    </Column>
+                    <Column>
+                        <Text text="EMAIL" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle" type="Navigation" press="onListItemPress">
+                        <cells>
+                            <ObjectIdentifier title="{ID}" text="{NAME}" />
+                            <Text text="{FORM}" />
+                            <Text text="{CITY}" />
+                            <Text text="{COUNTRY}" />
+                            <Text text="{REGION}" />
+                            <Text text="{TELEPHONE}" />
+                            <Text text="{EMAIL}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
         </semantic:content>
     </semantic:SemanticPage>
 </mvc:View>

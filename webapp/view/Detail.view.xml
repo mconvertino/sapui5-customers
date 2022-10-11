@@ -1,0 +1,32 @@
+<mvc:View controllerName="btp.academy.customers.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:semantic="sap.f.semantic" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+    <semantic:SemanticPage id="mySemanticPage" headerPinnable="true" toggleHeaderOnTitleClick="true" preserveHeaderStateOnScroll="false" titleAreaShrinkRatio="1:1.6:1.6" showFooter="true">
+        <semantic:titleHeading>
+            <Title text="{i18n>objectLabel} {/ID}" />
+        </semantic:titleHeading>
+        <semantic:content>
+            <l:VerticalLayout class="sapUiContentPadding">
+                <f:SimpleForm>
+                    <f:content>
+                        <Label text="{i18n>nameLabel}" />
+                        <Input id="nameInput" value="{/NAME}" />
+                        <Label text="{i18n>formLabel}" />
+                        <Input id="formInput" value="{/FORM}" />
+                        <Label text="{i18n>cityLabel}" />
+                        <Input id="cityInput" value="{/CITY}" />
+                        <Label text="{i18n>countryLabel}" />
+                        <Input id="countryInput" value="{/COUNTRY}" />
+                        <Label text="{i18n>regionLabel}" />
+                        <Input id="regionInput" value="{/REGION}" />
+                        <Label text="{i18n>emailLabel}" />
+                        <Input id="emailInput" value="{/EMAIL}" />
+                        <Label text="{i18n>telephoneLabel}" />
+                        <Input id="telephoneInput" value="{/TELEPHONE}" />
+                    </f:content>
+                </f:SimpleForm>
+            </l:VerticalLayout>
+        </semantic:content>
+        <semantic:positiveAction>
+            <semantic:PositiveAction text="{i18n>saveLabel}" press="onSubmit" />
+        </semantic:positiveAction>
+    </semantic:SemanticPage>
+</mvc:View>
